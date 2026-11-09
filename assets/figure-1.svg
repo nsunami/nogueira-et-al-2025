@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" role="img" aria-labelledby="fig1-title fig1-desc">
+  <title id="fig1-title">RBV and OS as complementary perspectives</title>
+  <desc id="fig1-desc">A circle divided into two halves. The left half is labelled Open Science and contains the words "Research data as a public good"; the right half is labelled Resource Based View and contains the words "Research data as a private asset". Circular arrows connect the two halves.</desc>
+
+  <defs>
+    <marker id="arrowhead" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 11 6 L 0 11 z" fill="#8d8d8d"/>
+    </marker>
+  </defs>
+
+  <!-- Outer field -->
+  <path d="M 380 80 A 200 200 0 0 0 380 480 Z" fill="#f2ede3"/>
+  <path d="M 380 80 A 200 200 0 0 1 380 480 Z" fill="#e6e2da"/>
+
+  <!-- Inner disc -->
+  <circle cx="380" cy="280" r="132" fill="none" stroke="#9b9b9b" stroke-width="14" opacity="0.38"/>
+  <path d="M 380 148 A 132 132 0 0 0 380 412 Z" fill="#1d3b4d"/>
+  <path d="M 380 148 A 132 132 0 0 1 380 412 Z" fill="#2c2c2c"/>
+
+  <!-- Seam -->
+  <line x1="380" y1="80" x2="380" y2="480" stroke="#ffffff" stroke-width="1.5" opacity="0.22"/>
+
+  <!-- Circular arrows -->
+  <path d="M 292 166 A 160 160 0 0 1 468 166" fill="none" stroke="#9b9b9b" stroke-width="11" stroke-linecap="round" marker-end="url(#arrowhead)"/>
+  <path d="M 468 394 A 160 160 0 0 1 292 394" fill="none" stroke="#9b9b9b" stroke-width="11" stroke-linecap="round" marker-end="url(#arrowhead)"/>
+
+  <!-- Outer labels -->
+  <text x="104" y="272" text-anchor="middle" font-family="'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif" font-size="23" fill="#1f2933">Open</text>
+  <text x="104" y="300" text-anchor="middle" font-family="'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif" font-size="23" fill="#1f2933">Science</text>
+
+  <text x="656" y="272" text-anchor="middle" font-family="'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif" font-size="23" fill="#1f2933">Resource</text>
+  <text x="656" y="300" text-anchor="middle" font-family="'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif" font-size="23" fill="#1f2933">Based View</text>
+
+  <!-- Inner labels -->
+  <text x="314" y="254" text-anchor="middle" font-family="'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif" font-size="20" font-weight="600" fill="#f7f2e8">Research</text>
+  <text x="314" y="280" text-anchor="middle" font-family="'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif" font-size="20" font-weight="600" fill="#f7f2e8">data as a</text>
+  <text x="314" y="306" text-anchor="middle" font-family="'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif" font-size="20" font-weight="600" fill="#f7f2e8">public good</text>
+
+  <text x="446" y="254" text-anchor="middle" font-family="'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif" font-size="20" font-weight="600" fill="#f7f2e8">Research</text>
+  <text x="446" y="280" text-anchor="middle" font-family="'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif" font-size="20" font-weight="600" fill="#f7f2e8">data as a</text>
+  <text x="446" y="306" text-anchor="middle" font-family="'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif" font-size="20" font-weight="600" fill="#f7f2e8">private asset</text>
+</svg>

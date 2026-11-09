@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{PAGE_TITLE}}</title>
+  <meta name="description" content="{{META_DESCRIPTION}}">
+  <meta name="author" content="Tadeu Fernando Nogueira, Trude Eikebrokk, Laila Økdal Aksetøy">
+  <link rel="canonical" href="{{CANONICAL_URL}}">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{TITLE}}">
+  <meta property="og:description" content="{{META_DESCRIPTION}}">
+  <meta property="og:url" content="{{CANONICAL_URL}}">
+  <meta property="og:site_name" content="LIBER Quarterly">
+  <meta property="og:image" content="{{OG_IMAGE_URL}}">
+  <meta property="og:image:alt" content="Research Data: A Public Good or a Private Asset? — LIBER Quarterly">
+  <meta property="article:published_time" content="2025-06-16">
+  <meta property="article:author" content="Tadeu Fernando Nogueira">
+  <meta property="article:author" content="Trude Eikebrokk">
+  <meta property="article:author" content="Laila Økdal Aksetøy">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{TITLE}}">
+  <meta name="twitter:description" content="{{META_DESCRIPTION}}">
+  <meta name="twitter:image" content="{{OG_IMAGE_URL}}">
+
+  {{CITATION_META}}
+  {{JSON_LD}}
+
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('theme');
+        var dark = stored ? stored === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (dark) document.documentElement.dataset.theme = 'dark';
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#article-body">Skip to article</a>
+  <div class="progress" aria-hidden="true"><div class="progress__bar" id="progress-bar"></div></div>
+
+  <header class="site-header">
+    <div class="shell site-header__inner">
+      <a class="brand" href="{{JOURNAL_URL}}" aria-label="LIBER Quarterly — The Journal of the Association of European Research Libraries">
+        <img class="logo-dark" src="assets/liber-quarterly-logo.png" alt="LIBER Quarterly">
+        <img class="logo-light" src="assets/liber-quarterly-logo-light.png" alt="LIBER Quarterly">
+      </a>
+      <div class="site-header__meta">
+        <span>Vol. 35 · No. 1 · 2025</span>
+        <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Switch to dark theme" aria-pressed="false">
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="hero">
+        <div class="shell hero__grid">
+          <div class="hero__main">
+            <p class="eyebrow">Article</p>
+            <h1 class="hero__title">{{TITLE}}</h1>
+            <p class="hero__authors">{{AUTHORS_HTML}}</p>
+            <ol class="affiliations">{{AFFILIATIONS_HTML}}</ol>
+            <ul class="keywords">{{KEYWORDS_HTML}}</ul>
+          </div>
+          <aside class="hero__aside" aria-label="Article details">
+            <div class="meta-card">{{META_CARD_HTML}}</div>
+            <div class="hero__actions">
+              <a class="button button--primary" href="{{DOI_URL}}">Read original</a>
+              <a class="button" href="{{PDF_URL}}">PDF</a>
+              <a class="button" href="{{XML_URL}}">XML</a>
+            </div>
+          </aside>
+        </div>
+      </header>
+
+      <section class="abstract" id="abstract" aria-labelledby="abstract-heading">
+        <div class="shell abstract__inner">
+          <h2 class="abstract__label" id="abstract-heading">Abstract</h2>
+          <div class="abstract__text">{{ABSTRACT_HTML}}</div>
+        </div>
+      </section>
+
+      <div class="shell article-grid">
+        <aside class="toc" aria-label="Table of contents">
+          <details class="toc__details">
+            <summary class="toc__summary">Contents</summary>
+            <nav class="toc__nav" aria-label="Article sections">
+              {{TOC_HTML}}
+            </nav>
+          </details>
+        </aside>
+
+        <div class="article-body" id="article-body">
+          {{ARTICLE_BODY}}
+        </div>
+      </div>
+
+      <section class="citation-section" aria-labelledby="cite-heading">
+        <div class="shell">
+          <h2 class="section-kicker" id="cite-heading">Cite this article</h2>
+          <div class="citation-card">
+            <div class="citation-block">
+              <button class="copy-button" type="button" data-copy-target="apa-citation">Copy APA</button>
+              <p id="apa-citation">{{APA_CITATION}}</p>
+            </div>
+            <div class="citation-block">
+              <button class="copy-button" type="button" data-copy-target="bibtex-citation">Copy BibTeX</button>
+              <pre id="bibtex-citation">{{BIBTEX_CITATION}}</pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="source-section" aria-labelledby="source-heading">
+        <div class="shell">
+          <h2 class="section-kicker" id="source-heading">Source &amp; license</h2>
+          <div class="source-card">
+            <div>
+              <a class="license-badge" href="https://creativecommons.org/licenses/by/4.0/" rel="license" target="_blank">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M8.3 9.2a4 4 0 0 1 7.1 2.2h-2.1a2 2 0 0 0-3.6-.9Zm7.4 5.6a4 4 0 0 1-7.1-2.2h2.1a2 2 0 0 0 3.6.9Z" fill="currentColor"/></svg>
+                CC BY 4.0
+              </a>
+              <p><strong>© 2025 Tadeu Fernando Nogueira, Trude Eikebrokk, Laila Økdal Aksetøy.</strong></p>
+              <p>This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license" target="_blank">Creative Commons Attribution 4.0 International License</a>.</p>
+              <p>Originally published in <em>LIBER Quarterly: The Journal of the Association of European Research Libraries</em>, Vol. 35, No. 1 (2025), pp. 1–28.</p>
+              <p>This HTML edition reproduces the article text from the publisher's JATS XML. Figure 1 has been redrawn as SVG; navigation, formatting, and hyperlinks have been added. The article text is unchanged.</p>
+            </div>
+            <div class="source-links">
+              <a href="{{ARTICLE_URL}}" target="_blank" rel="noopener">Original article</a>
+              <a href="{{DOI_URL}}" target="_blank" rel="noopener">DOI: 10.53377/lq.22604</a>
+              <a href="{{PDF_URL}}" target="_blank" rel="noopener">Publisher PDF</a>
+              <a href="{{XML_URL}}" target="_blank" rel="noopener">JATS XML</a>
+              <a href="{{JOURNAL_URL}}" target="_blank" rel="noopener">LIBER Quarterly</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <p class="footer-brand">LIBER <span>Quarterly</span></p>
+        <p class="footer-note">An HTML edition of “Research Data: A Public Good or a Private Asset?” by Tadeu Fernando Nogueira, Trude Eikebrokk, and Laila Økdal Aksetøy. The article text is reproduced from the publisher's JATS XML under CC BY 4.0.</p>
+      </div>
+      <div>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="{{ARTICLE_URL}}" target="_blank" rel="noopener">Original article</a>
+          <a href="{{DOI_URL}}" target="_blank" rel="noopener">DOI</a>
+          <a href="{{JOURNAL_URL}}" target="_blank" rel="noopener">LIBER Quarterly</a>
+          <a href="{{REPO_URL}}" target="_blank" rel="noopener">Source on GitHub</a>
+        </nav>
+        <p class="footer-license">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M8.3 9.2a4 4 0 0 1 7.1 2.2h-2.1a2 2 0 0 0-3.6-.9Zm7.4 5.6a4 4 0 0 1-7.1-2.2h2.1a2 2 0 0 0 3.6.9Z" fill="currentColor"/></svg>
+          CC BY 4.0 · 2025
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var toggle = document.getElementById('theme-toggle');
+      var stored = null;
+      try { stored = localStorage.getItem('theme'); } catch (e) {}
+      var dark = stored ? stored === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+      function applyTheme(isDark) {
+        if (isDark) root.dataset.theme = 'dark';
+        else delete root.dataset.theme;
+        if (toggle) {
+          toggle.setAttribute('aria-pressed', String(isDark));
+          toggle.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
+        }
+      }
+
+      applyTheme(dark);
+
+      if (toggle) {
+        toggle.addEventListener('click', function () {
+          dark = !dark;
+          applyTheme(dark);
+          try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch (e) {}
+        });
+      }
+
+      var bar = document.getElementById('progress-bar');
+      function updateProgress() {
+        if (!bar) return;
+        var doc = document.documentElement;
+        var max = doc.scrollHeight - window.innerHeight;
+        var pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+        bar.style.width = Math.min(100, Math.max(0, pct)) + '%';
+      }
+      window.addEventListener('scroll', updateProgress, { passive: true });
+      window.addEventListener('resize', updateProgress);
+      updateProgress();
+
+      var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.toc__link'));
+      var headings = tocLinks.map(function (link) {
+        var id = link.getAttribute('href');
+        return id ? document.querySelector(id) : null;
+      }).filter(Boolean);
+      var tocFrame = 0;
+
+      function updateActiveToc() {
+        tocFrame = 0;
+        if (!headings.length) return;
+
+        var marker = window.scrollY + 140;
+        var active = null;
+        headings.forEach(function (heading) {
+          var top = heading.getBoundingClientRect().top + window.scrollY;
+          if (top <= marker) active = heading;
+        });
+
+        if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+          active = headings[headings.length - 1];
+        }
+
+        tocLinks.forEach(function (link) {
+          if (active && link.getAttribute('href') === '#' + active.id) link.setAttribute('aria-current', 'location');
+          else link.removeAttribute('aria-current');
+        });
+      }
+
+      function queueActiveToc() {
+        if (tocFrame) return;
+        tocFrame = window.requestAnimationFrame(updateActiveToc);
+      }
+
+      window.addEventListener('scroll', queueActiveToc, { passive: true });
+      window.addEventListener('resize', queueActiveToc);
+      updateActiveToc();
+
+      document.querySelectorAll('.copy-button').forEach(function (button) {
+        button.addEventListener('click', function () {
+          var target = document.getElementById(button.getAttribute('data-copy-target'));
+          if (!target) return;
+          var text = target.innerText || target.textContent || '';
+
+          function done() {
+            var old = button.textContent;
+            button.textContent = 'Copied';
+            button.setAttribute('data-copied', 'true');
+            setTimeout(function () {
+              button.textContent = old;
+              button.removeAttribute('data-copied');
+            }, 1800);
+          }
+
+          function fallback() {
+            var ta = document.createElement('textarea');
+            ta.value = text;
+            ta.setAttribute('readonly', '');
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            try { document.execCommand('copy'); done(); } catch (e) {}
+            document.body.removeChild(ta);
+          }
+
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(done).catch(fallback);
+          } else {
+            fallback();
+          }
+        });
+      });
+
+      var tocDetails = document.querySelector('.toc__details');
+      if (tocDetails) {
+        var mq = window.matchMedia('(min-width: 961px)');
+        var userToggled = false;
+        var programmatic = false;
+        tocDetails.addEventListener('toggle', function () {
+          if (!programmatic) userToggled = true;
+          queueActiveToc();
+        });
+        function syncToc() {
+          if (userToggled) return;
+          programmatic = true;
+          tocDetails.open = mq.matches;
+          programmatic = false;
+        }
+        syncToc();
+        if (mq.addEventListener) mq.addEventListener('change', syncToc);
+        else if (mq.addListener) mq.addListener(syncToc);
+      }
+    })();
+  </script>
+</body>
+</html>
